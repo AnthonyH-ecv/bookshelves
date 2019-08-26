@@ -5,11 +5,12 @@
             <h3 (click)="onView(i,'allBook')">{{book.title}}</h3>
             <p class="list-group-item-text">{{book.owner}}</p>
             <button 
-                [ngClass]="book.borrow ? 'btn btn-danger' : 'btn btn-success'" 
-                [disabled]="book.borrow" (click)="isBorrow(book)" 
+                [ngClass]="book.borrowBy ? 'btn btn-danger' : 'btn btn-success'"
+                [disabled]="book.borrowBy" (click)="isBorrowBy(book,owner.firstName)"
                 *ngIf="book.owner !== owner.firstName">
                 Borrow
             </button>
+            <p>Borrow by: {{book.borrowBy}}</p>
         </li>
     </div>
 </div>

@@ -44,12 +44,10 @@ export class AllBooksComponent implements OnInit {
     this.router.navigate(['/books', 'view', id]);
   }
 
-  isBorrow(book: BookModel) {
-    console.log(this.books);
+  isBorrowBy(book: BookModel, owner: string) {
     this.borrow = true;
-    this.bookService.borrow(book);
-    console.log(this.borrow);
-    console.log(this.books);
+    this.bookService.borrow(book, owner);
+
   }
 
 }

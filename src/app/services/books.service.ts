@@ -81,8 +81,8 @@ export class BooksService {
     );
   }
 
-  borrow(book: BookModel) {
-    book.borrow = true;
+  borrow(book: BookModel, owner: string) {
+    book.borrowBy =  owner;
     this.saveBooks();
     this.emitBooks();
     this.emitAllBooks();
