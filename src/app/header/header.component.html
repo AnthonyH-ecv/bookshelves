@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li routerActive="nav-item active">
+          <a class="nav-link" routerLink="books">My Books</a>
+        </li>
+        <li routerActive="nav-item active">
+          <a class="nav-link " routerLink="books/all"> All Books</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li routerActive="nav-item active" *ngIf="!isAuth">
+          <a class="nav-link" routerLink="auth/signup">Sign up</a>
+        </li>
+        <li routerActive="nav-item active" *ngIf="!isAuth">
+          <a class="nav-link" routerLink="auth/signin">Sign in</a>
+        </li>
+        <li routerActive="nav-item active" *ngIf="isAuth">
+          <p class="header-user-name">{{ getUser.firstName }}</p>
+        </li>
+        <li routerActive="nav-item active" *ngIf="isAuth">
+          <a class="nav-link" (click)="signOut()"
+            >Sign out</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

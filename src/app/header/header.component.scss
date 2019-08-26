@@ -1,0 +1,17 @@
+.navbar.navbar-expand-sm.bg-light {
+    background-color: #eaeef2 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+
+    &:hover {
+        color:#007bff;
+    }
+}
+
+.header-user-name {
+    line-height: 2.4;
+    margin:0;
+    font-weight: 600;
+}
