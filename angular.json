@@ -107,6 +107,7 @@
               "src/assets"
             ],
             "styles": [
+              "/home/dev-conf-03/Bureau/bookshelves2/node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
