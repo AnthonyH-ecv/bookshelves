@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h2>Books library</h2>
+      <button class="btn btn-primary mb-3" (click)="addBook()">Add new book</button>
+      <li class="list-group-item mb-3" *ngFor="let book of books; let i = index">
+        <h3 (click)="onView(i,'myBooks')">{{ book.title }}</h3>
+        <button class="btn btn-default" (click)="removeBook(book)">Remove</button>
+      </li>
+    </div>
+  </div>
+  
